@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 1.2;
+}
+*:focus {
+	outline: 0;
+}
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+h1, h2 {
+    color: rgb(46, 102, 74);
+    padding: 30px 0 50px 0;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+h3, p {
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+ul, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    background: url("../img/bg_main_fon.png") no-repeat center;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+}
+.container {
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+}
+hr {
+    border: none;
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+.firstBlock,
+.secondBlock,
+.thirdBlock,
+.fourBlock {
+    margin: auto;
+}
+/*//////////////////////////    стрелки слайда //////////////*/
+.slick-prev  {
+    position: absolute;
+    left: 20px;
+    z-index: 2;
+    width: 50px;
+    height: 200px;
+}
+.slick-next {
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+    width: 50px;
+    height: 200px;
+}
+.slick-prev::before {
+    content: '\f104';
+    font-family: FontAwesome;
+    font-size: 30px;
+    color: grey;
+}
+.slick-next::before {
+    content: '\f105';
+    font-family: FontAwesome;
+    font-size: 30px;
+    color: grey;
+}
+/*////////////////////////////////////////////////////////////////*/
+/*//////////////////////////    шапка главного блока      //////////////////////////////////////////////////////////*/
+.header {
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 1170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.header nav .menu,
+.header .headerItems,
+.header .headerItems .lang,
+.header .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.headerItems {
+    padding: 0 30px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+.callCenter {
+    padding: 0;
+    white-space: nowrap;
+}
+.social p {
+    padding: 0 20px 0 0;
+}
+.menu {
+    background-color: rgb(46, 102, 74);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    border-radius: 0 0 10px 10px;
+    -webkit-transition: 1.8s;
+    transition: 1.8s;
+    width: 300px;
+    height: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    position: relative;                                          
+}
+.menuItems {
+    display: none;
+}
+div#showMenu.menu.in {
+    border-radius: 0;
+    -webkit-transition: none;
+    transition: none;
+}
+.menu p {
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+/*//////// анимация заполнения бокала   ///////*/
+.open_menu {
+    position: absolute;
+    left: 21px;
+    bottom: 31px;
+    width: 14px;
+    height: 11px;
+    border-radius: 50% 50% 0 0;
+    background:#ffffff;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+/*////////////////////////////////////////////////////*/
+.menuItems {
+    background-color: rgb(38, 36, 36);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    width: 300px;
+    height: 650px;
+    position: absolute;
+    z-index: 3;
+}
+.menuItems a {
+    padding-left: 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 3;
+}
+.lang .tab {
+    color: black;
+}
+.callCenter,
+.lang .active {
+    color: rgb(46, 102, 74);
+    font-weight: bold;
+    text-align: left;
+}
+label:hover {
+    cursor: pointer;
+}
+.social img {
+    width: 20px;
+    height: 20px;
+}
+/*//////////////////////////    конец header  ////////////////////////////////////////////*/
+/*//////////////////////////    основной текстовый блок     ////////////////////////////////////////////*/
+/*//////////////////////////    карусель для продукта       ////////////////////////////////////////////*/
+.firstBlock {
+    background-color: rgb(255, 255, 255);
+    width: 1170px;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;                     
+}
+.firstCarusel {
+    max-width: 300px;
+    position: relative;
+}
+.firstBlock .firstCarusel div {
+    position: relative;
+}
+.firstBlock .firstCarusel h4 {
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    bottom: 50%;
+    left: -200px;
+    color: rgb(200, 200, 200);
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: 4px;
+}
+.firstCarusel img {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+/*//////////////////////////    стиль для arrow первого слайда  ////////////////////////////////////////////*/
+.firstPrevArrow {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    width: 30px;
+    height: 100px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+}
+.firstNextArrow {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    width: 30px;
+    height: 100px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+}
+.firstCarusel .firstPrevArrow::before {
+    content: '\f104';
+    font-family: FontAwesome;
+    font-size: 30px;
+    color: grey;
+    opacity: 1;
+}
+.firstCarusel .firstNextArrow::before {
+    content: '\f105';
+    font-family: FontAwesome;
+    font-size: 30px;
+    color: grey;
+}
+/*//////////////////////////    конец   ////////////////////////////////////////////*/
+/*//////////////////////////    2 слайд для продукта    ////////////////////////////*/
+.mainInfo {
+    max-width: calc(100% - 300px);
+}
+.mainInfo .logo,
+.mainInfo h1 {
+    text-align: center;
+}
+.mainInfo .logo {
+    padding: 0;
+}
+/*//////////////////////////    прозрачность   ////////////////////////////////////////////*/
+.newsBlock {
+    padding: 0 50px;
+    opacity: 0.5;
+}
+div.newsBlock.slick-slide.slick-current.slick-active.slick-center {
+    opacity: 1;
+}
+/* для конечного потока
+div.newsBlock.slick-slide.slick-current.slick-center {
+    opacity: 1;
+}*/
+/*-------------------------*/
+.dataBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.dataBlock a {
+    color: rgb(46, 102, 74);
+    font-weight: bold;
+}
+.dataBlock {
+    position: relative;
+}
+.dataBlock hr {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100px;
+}
+/*//////////////////////////    конец основного текстового блока   ////////////////////////////////////////////*/
+/*//////////////////////////    2 блок      ////////////////////////////////////////////*/
+.secondBlock {
+    width: 1170px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+}
+.secondCarusel {
+    padding-bottom: 30px;
+}
+.secondCarusel .block {
+    padding: 0 70px;
+}
+.secondBlock article {
+    line-height: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+/*//////////////////////////    сделать абсолют к блоку   ////////////////////////////////////////////*/
+.secondBlock  a {
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    color: rgb(46, 102, 74);
+    font-weight: bold;
+}
+.secondBlock hr {
+    position: absolute;
+    top: 25px;
+    width: 100px;
+    color: black;
+}
+.secondBlock .block img {
+    padding-left: 50px;
+    height: 350px;
+}
+/*//////////////////////////    конец 2 блока   ////////////////////////////////////////////*/
+/*//////////////////////////    3 блок          ////////////////////////////////////////////*/
+.thirdBlock {
+    width: 1170px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    -webkit-transition: 2s;
+    transition: 2s;
+}
+.thirdTab {
+    padding-bottom: 30px;
+}
+.history {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 30px;
+}
+.historyText {
+	padding-top: 40px;
+}
+.thirdBlock a {
+    color: rgb(46, 102, 74);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.historyImg {
+    margin-right: 30px; 
+    max-width: 50%; 
+}
+.historyImg img {
+    max-width: 550px;
+    border-radius: 10px;
+}
+.date {
+    position: relative;
+    cursor: pointer;
+}
+.thirdBlock .date {
+	color: rgb(200, 200, 200);
+}
+.thirdBlock hr {
+	position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100px;
+    border: none;
+    color: rgb(200, 200, 200);
+    background-color:rgb(200, 200, 200);
+    height: 1px;
+}
+div.slick-slide.slick-current.slick-center hr {
+	border: none;
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+div.slick-slide.slick-current.slick-center .date {
+	color: rgb(46, 102, 74)
+}
+.thirdTabs {
+    position: relative;
+}
+.thirdCarusel {
+	width: 550px;
+	position: absolute;
+	left: 50%;
+	z-index: 3;
+}
+/*//////////////////////////    конец 3 блока   ////////////////////////////////////////////*/
+/*//////////////////////////    4 блок      ////////////////////////////////////////////*/
+.fourBlock {
+    width: 1170px; 
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+/*
+.fourCarusel {
+    display: flex;
+}*/
+.fourBlock article {
+    padding: 0 70px;
+    position: relative;
+}
+.fourBlock hr {
+    position: absolute;
+    left: 70px;
+    top: 25px;
+    width: 100px;
+    color: black;
+}
+.fourBlock .review {
+    display: inline;
+    text-align: center;
+    padding: 30px 0;
+}
+.fourBlock a { 
+    text-transform: uppercase;
+    color: rgb(46, 102, 74);
+    font-weight: bold;
+}
+/*//////////////////////////    конец  4 блока     ////////////////////////////////////////////*/
+/*//////////////////////////    footer   ////////////////////////////////////////////*/
+.footer {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(46, 102, 74);
+    width: 1170px;
+    height: 86px;
+}
+.footer p {
+    color: rgb(255, 255, 255);
+    padding: 20px 10px 0 70px;
+    text-align: left;
+    letter-spacing: 1.5px;
+}
+.footer a {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.footer p:first-child {
+    line-height: 1.2;
+}
+.footer p:last-child {
+    line-height: 1.5;
+}
